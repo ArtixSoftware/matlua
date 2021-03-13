@@ -305,6 +305,11 @@ function Objects.new(Type)
 		end
 		return NewImage
 	else
+		if Type == "ScreenGui then
+			if syn then
+				pcall(syn.protect_gui, ScreenGui)
+			end
+		end
 		return Instance.new(Type)
 	end
 end
